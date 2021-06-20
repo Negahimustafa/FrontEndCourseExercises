@@ -1,0 +1,4 @@
+let para = document.createElement("p");
+para.textContent = "Hey, I am red!";
+text.appendChild(para);
+para.style.color = "red";
