@@ -5,7 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      button {
+        cursor: pointer;
+        font-size: larger;
+      }
+    </style>
   </head>
+  <div class="controls">
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
+  </div>
   <body>
     <script>
       function computerPlay() {
@@ -20,8 +31,21 @@
       let computerScore = 0;
       let draws = 0;
 
+      let rock = document.querySelector("#rock");
+      let paper = document.querySelector("#paper");
+      let scissors = document.querySelector("#scissors");
+      rock.addEventListener("click", function () {
+        console.log("Rock");
+      });
+      paper.addEventListener("click", function () {
+        console.log("Paper");
+      });
+      scissors.addEventListener("click", function () {
+        console.log("Scissors");
+      });
+
       function playRound(playerSelection, computerSelection) {
-        playerSelection = playerSelection.toLowerCase();
+        // playerSelection = playerSelection.toLowerCase();
 
         if (computerSelection === "Rock") {
           if (playerSelection === "rock") {
@@ -61,28 +85,24 @@
             return "You Lost";
           }
         }
-
-        console.log(playerScore());
+        console.log(playRound(paper, Rock));
       }
+      // const playerSelection = "paper";
+      // const computerSelection = computerPlay();
 
-      const computerSelection = computerPlay();
-      for (let i = 0; i < 7; i++) {
-        let computerSelection = computerPlay();
-        let userSelection = prompt();
-        let round = playRound(userSelection, computerSelection);
-        console.log(round);
-      }
+      // console.log(playerScore);
 
-      function gameScore() {
-        if (playerScore > computerScore) {
-          return "You won the game";
-        } else if (playerScore < computerScore) {
-          return "You lost the game";
-        } else if (playerScore === computerScore) {
-          return "You lost the game";
-        }
-      }
-      console.log(gameScore());
+      // function gameScore() {
+      //   if (playerScore > computerScore) {
+      //     return "You won the game";
+      //   } else if (playerScore < computerScore) {
+      //     return "You lost the game";
+      //   } else if (playerScore === computerScore) {
+      //     return "You lost the game";
+      //   }
+      // }
+
+      // console.log(gameScore());
     </script>
   </body>
 </html>
