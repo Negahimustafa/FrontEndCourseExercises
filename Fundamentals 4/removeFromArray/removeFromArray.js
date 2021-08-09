@@ -1,4 +1,8 @@
-const removeFromArray = function() {
+const removeFromArray = function (array1, str) { 
+    
+    return array1 + str 
+
+
 
 }
 

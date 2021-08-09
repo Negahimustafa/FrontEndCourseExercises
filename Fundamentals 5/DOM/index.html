@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body id="text">
+    <script>
+      let para = document.body;
+      para.innerHTML = "<p> Hey, I am red! </p>";
+      para.style.color = "red";
+
+      let h3 = document.createElement("h3");
+      h3.textContent = "I am blue h3!";
+      text.appendChild(h3);
+      h3.style.color = "blue";
+
+      let div = document.createElement("div");
+      div.setAttribute("id", "myDiv");
+      div.style.backgroundColor = "pink";
+      div.style.border = "1px solid black";
+      div.textContent = "hi";
+      document.body.appendChild(div);
+
+      let h1 = document.createElement("h1");
+      h1.textContent = "I'm in a div";
+      myDiv.appendChild(h1);
+
+      let newPara = document.createElement("p");
+      newPara.textContent = "Me too";
+      myDiv.appendChild(newPara);
+    </script>
+  </body>
+</html>
